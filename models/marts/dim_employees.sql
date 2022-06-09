@@ -5,6 +5,7 @@ with staging as (
     , transformed as (
         select
             row_number() over (order by employee_id) as employee_sk -- auto-incremental surrogate key
+            , employee_id
             , last_name
             , first_name
             , title
