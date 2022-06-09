@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: dim_shippers
+    columns:
+      - name: shipper_sk
+        description: The primary key of the dim shippers
+        tests:
+          - unique
+          - not_null

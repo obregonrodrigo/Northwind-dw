@@ -4,7 +4,7 @@ with source_data as (
         , company_name
         , contact_name
         , contact_title
-        , address
+        , address as street_address
         , city
         , region
         , postal_code
