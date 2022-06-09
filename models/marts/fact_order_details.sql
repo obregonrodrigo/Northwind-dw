@@ -9,7 +9,7 @@ with customers as (
     select
         employee_sk
         , employee_id
-    from {{ref('dim_customers')}}
+    from {{ref('dim_employees')}}
 )
 
 , products as (
@@ -74,7 +74,7 @@ with customers as (
         , order_details.unit_price
         , order_details.quantity
     from orders_with_sk as orders
-    left join orders_detail_with_sk as order_details on orders.order_id = order_id
+    left join orders_detail_with_sk order_details on orders.order_id = order_details.order_id
 )
 
 select *
