@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: fact_order_details
+    columns:
+      - name: order_id
+        description: The primary key of the fact order details
+        tests:
+          - not_null
+
+      - name: employee_fk
+        tests:
+          - not_null
+
+      - name: customer_fk
+        tests:
+          - not_null
+
+      - name: shipper_fk
+        tests:
+          - not_null
+
+      - name: product_fk
+        tests:
+          - not_null
