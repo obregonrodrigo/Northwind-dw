@@ -19,17 +19,25 @@ with customers as (
     from {{ref('dim_products')}}
 )
 
+, shippers as (
+    select
+        shipper_sk
+        , shipper_id
+    from {{ref('dim_shippers')}}
+)
+
 , orders_with_sk as (
     select
         orders.order_id
         , employees.employee_sk as employee_fk
         , customers.customer_sk as customer_fk
+        , shippers.shipper_sk as shipper_fk
         , orders.customer_id
         , orders.employee_id
+        , orders.ship_via
         , orders.order_date
         , orders.required_date
         , orders.shipped_date
-        , orders.ship_via
         , orders.freight
         , orders.ship_name
         , orders.ship_address
