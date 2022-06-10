@@ -46,8 +46,9 @@ with customers as (
         , orders.ship_postal_code
         , orders.ship_country
     from {{ref('stg_orders')}} orders
-    left join employees on orders.employee_id = employees.employee_id
     left join customers on orders.customer_id = customers.customer_id
+    left join employees on orders.employee_id = employees.employee_id
+    left join shippers on orders.ship_via = shippers.shipper_id
 )
 
 , orders_detail_with_sk as (
@@ -66,6 +67,7 @@ with customers as (
         order_details.order_id
         , orders.employee_fk
         , orders.customer_fk
+        , orders.shipper_fk
         , order_details.product_fk
         , orders.order_date
         , orders.required_date
