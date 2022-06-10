@@ -3,10 +3,10 @@ with source_data as (
         order_id
         , customer_id
         , employee_id
+        , ship_via
         , order_date
         , required_date
         , shipped_date
-        , ship_via
         , freight
         , ship_name
         , ship_address
