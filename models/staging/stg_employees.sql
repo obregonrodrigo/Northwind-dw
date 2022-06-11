@@ -3,11 +3,12 @@ with source_data as (
         employee_id
         , last_name
         , first_name
+        , concat(first_name, ' ',last_name) as full_name
         , title
         , title_of_courtesy
         , birth_date
         , hire_date
-        , address as street_address
+        , 'address' as street_address
         , city
         , region
         , postal_code

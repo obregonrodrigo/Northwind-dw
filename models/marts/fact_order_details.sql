@@ -58,6 +58,7 @@ with customers as (
         , order_details.discount
         , order_details.unit_price
         , order_details.quantity
+        , order_details.total_order
     from {{ref('stg_order_details')}} order_details
     left join products on order_details.product_id = products.product_id
 )
@@ -83,6 +84,7 @@ with customers as (
         , order_details.discount
         , order_details.unit_price
         , order_details.quantity
+        , order_details.total_order
     from orders_with_sk as orders
     left join orders_detail_with_sk order_details on orders.order_id = order_details.order_id
 )
