@@ -16,4 +16,4 @@ models:
         description: Name of the company
       
       - name: phone
-        description:Shipper phone
+        description: Shipper phone
