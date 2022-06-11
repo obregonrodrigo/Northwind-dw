@@ -8,3 +8,27 @@ models:
         tests:
           - unique
           - not_null
+      
+      - name: customer_id
+        description: Unique identifier in customer table
+      
+      - name: contact_name
+        description: Name of the contact within the client company
+      
+      - name: contact_title
+        description: Contact role
+      
+      - name: street_address
+        description: Customer address
+      
+      - name: city
+        description: Customer city
+      
+      - name: postal_code
+        description: Customer postal-code
+      
+      - name: country
+        description: Customer country
+      
+      - name: phone
+        description: Customer contact phone

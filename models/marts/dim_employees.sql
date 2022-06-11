@@ -8,12 +8,12 @@ with staging as (
             , employee_id
             , full_name
             , title
-            , title_of_courtesy
+            -- , title_of_courtesy
             , birth_date
             , hire_date
             , street_address
             , city
-            , region
+            -- , region
             , postal_code
             , country
             , home_phone
