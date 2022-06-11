@@ -8,3 +8,72 @@ models:
         tests:
           - unique
           - not_null
+
+      - name: product_id
+        description: Unique identifier in product table
+        tests:
+          - not_null
+
+      - name: supplier_id
+        description: Unique identifier in supplier table
+        tests:
+          - not_null
+
+      - name: category_id
+        description: Unique identifier in category table
+        tests:
+          - not_null
+
+      - name: product_name
+        description: Product name
+
+      - name: qty_per_unit
+        description: Product packaging specification
+
+      - name: unit_price
+        description: Product unit price
+
+      - name: units_in_stock
+        description: Product units in stock
+
+      - name: units_on_order
+        description: Number of reserved units of the product
+
+      - name: reorder_level
+        description: Product reorder level
+
+      - name: is_discontinued
+        description: Product is or is not for sale
+      
+      - name: category_name
+        description: Category name
+        
+      - name: notes
+        description: Description about a category
+      
+      - name: company_name
+        description: Supplier name
+      
+      - name: contact_name
+        description: Name of the contact within the supplier company
+        
+      - name: contact_title
+        description: Contact role
+      
+      - name: street_address
+        description: Supplier address
+      
+      - name: city
+        description: Supplier city
+
+      - name: region
+        description: Supplier region
+      
+      - name: postal_code
+        description: Supplier postal-code
+      
+      - name: country
+        description: Supplier country
+      
+      - name: phone
+        description: Supplier contact phone

@@ -8,3 +8,27 @@ models:
         tests:
           - unique
           - not_null
+      - name: employee_id
+        description: Unique identifier in employee table
+      - name: full_name
+        description: Employee full name
+      - name: title
+        description: Employee role
+      - name: birth_date
+        description: Employee birthday
+      - name: hire_date
+        description: Employee hiring date 
+      - name: street_address
+        description: Employee address
+      - name: city
+        description: Employee city
+      - name: postal_code
+        description: Employee postal-code
+      - name: country
+        description: Employee country
+      - name: home_phone
+        description: Employee phone
+      - name: notes
+        description: Remarks about the employee
+      - name: reports_to
+        description: Employee supervisor

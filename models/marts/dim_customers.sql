@@ -11,11 +11,11 @@ with staging as (
             , contact_title
             , street_address
             , city
-            , region
+            --, region
             , postal_code
             , country
             , phone
-            , fax
+            --, fax
         from staging
 )
 
